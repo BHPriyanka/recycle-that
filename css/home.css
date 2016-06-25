@@ -1,0 +1,16 @@
+.fh5co-cover,
+.fh5co-hero {
+  position: relative;
+  height: 800px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-cover,
+  .fh5co-hero {
+    height: 700px;
+  }
+}
+.fh5co-cover.fh5co-cover_2 {
+  height: 700px;
+}
