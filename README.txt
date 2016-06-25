@@ -1,6 +1,6 @@
 
 TITLE: 
-Valet - Fully Responsive Free HTML5 template
+Render - One Page Responsive Free HTML5 template
 
 AUTHOR:
 DESIGNED & DEVELOPED by FREEHTML5.co
@@ -27,6 +27,9 @@ http://modernizr.com/
 Google Fonts
 https://www.google.com/fonts/
 
+Icomoon
+https://icomoon.io/app/
+
 Respond JS
 https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
 
@@ -36,26 +39,8 @@ http://daneden.me/animate
 jQuery Waypoint
 https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
-Demo Images:
-http://unsplash.com
+Superfish Menu
+http://users.tpg.com.au/j_birch/plugins/superfish/examples/
 
-Magnific Popup:
-http://dimsemenov.com/plugins/magnific-popup/
-
-Themify Icons:
-https://themify.me/themify-icons
-
-Superfish
-http://users.tpg.com.au/j_birch/plugins/superfish/
-
-Hover Intent
-http://cherne.net/brian/resources/jquery.hoverIntent.html
-
-Easy Responsive Tabs to Accordion
-https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion
-
-Magnific Popup
-http://dimsemenov.com/plugins/magnific-popup/
-
-Owl Carousel
-http://www.owlcarousel.owlgraphic.com/
+hoverIntent
+https://github.com/briancherne/jquery-hoverIntent
