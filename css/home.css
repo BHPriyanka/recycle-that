@@ -11,6 +11,7 @@
     height: 700px;
   }
 }
+
 .fh5co-cover.fh5co-cover_2 {
   height: 700px;
 }
@@ -21,8 +22,24 @@
 }
 
 .btn.btn-primary-green {
-  background: #79c34f !important; 
+  background: #79c34f; 
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
 }
+
+.fh5co-cover .desc {
+    top: 35%;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-cover .desc .btn{
+    display: block;
+	margin-bottom: 10px;
+	max-width: 330px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+}
+
+
