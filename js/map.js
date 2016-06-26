@@ -76,20 +76,19 @@ function initMap() {
                         address: results[0].formatted_address
                     };
                     console.log(info);
+                    dropLocations.push(info);
                     addMarkers(info);
                   
                 } 
             });
             
         }
+        console.log(dropLocations);
        
     }
         else{
             console.log('no');
         }
-        
-        
-        
   }).fail(function(error){
       alert("There was an error loading the drop locations, please refresh the page and try agian");
     });
