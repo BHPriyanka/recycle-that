@@ -1,9 +1,11 @@
 var map;
+var testJSON = [{"street":"315 huntington ave.","city":"boston","state":"ma","zipcode":"02115","status":"active","donator":"username1","recycler":"null"},{"street":"151 Cambridge St","city":"cambridge","state":"ma","zipcode":"02114","status":"active","donator":"username1","recycler":"null"},{"street":"25 first st","city":"cambridge","state":"ma","zipcode":"02141","status":"inactive","donator":"username1","recycler":"username2"}];
+
 function initMap() {
     var dropLocations = [];
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
-      center: {lat: 42.339348, lng: -71.088173},
+      center: {lat: 42.3685853, lng: -71.07527879999998},
       disableDefaultUI: true
     });
     
@@ -50,7 +52,7 @@ function initMap() {
             info: contentString,
             map: map
           });
-            
+            dropLocations.push(dropLocation.mark);
           bounds.extend(dropLocation.mark.position);
 
            google.maps.event.addListener(dropLocation.mark, 'click', function() {
@@ -61,10 +63,11 @@ function initMap() {
     }
     
     function getDropLocations() {
-    $.getJSON('http://recycle-that.jastcode.com/api/drop', function (data) {
-    var drops = data; 
+    //$.getJSON('http://recycle-that.jastcode.com/api/drop', function (data) {
+    var drops = testJSON; 
     if (drops.length) {
         for(var i in drops){
+        
             var geocoder = new google.maps.Geocoder();
             geocoder.geocode( { 'address': drops[i].street + ', ' + drops[i].city + ' ' + drops[i].state + ' ' + drops[i].zipcode}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
@@ -81,7 +84,7 @@ function initMap() {
                   
                 } 
             });
-            
+         
         }
         console.log(dropLocations);
        
@@ -89,10 +92,14 @@ function initMap() {
         else{
             console.log('no');
         }
-  }).fail(function(error){
-      alert("There was an error loading the drop locations, please refresh the page and try agian");
-    });
+  //}).fail(function(error){
+      //alert("There was an error loading the drop locations, please //refresh the page and try agian");
+    //});
     }
       
-   
+$('#pickup').click(function(){
+      dropLocations[0].mark.setMap(null);
+      dropLocations.shift();
+     
+});
 }
