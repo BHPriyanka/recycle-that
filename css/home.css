@@ -14,3 +14,15 @@
 .fh5co-cover.fh5co-cover_2 {
   height: 700px;
 }
+
+.services.animate-box img {
+	height: 50px;
+	display: inline;
+}
+
+.btn.btn-primary-green {
+  background: #79c34f !important; 
+  color: #fff;
+  border: none !important;
+  border: 2px solid transparent !important;
+}
