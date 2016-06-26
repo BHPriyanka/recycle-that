@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4034,13 +4034,13 @@ tbody.collapse.in {
 }
 
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   z-index: 1000;
   display: none;
-  float: left;
-  min-width: 160px;
+  float: center;
+  min-width: 20%;
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
