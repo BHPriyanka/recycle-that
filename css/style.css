@@ -108,13 +108,13 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 150px;
+  height: 110px;
   font-weight: 300;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover,
   .fh5co-hero {
-    height: 150px;
+    height: 100px;
   }
 }
 
@@ -1232,6 +1232,10 @@ h3.heading-section:before {
   height: 100%;
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
+}
+
+#fh5co-logo  img {
+	max-height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
