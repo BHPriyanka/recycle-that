@@ -1,0 +1,80 @@
+.fh5co-cover,
+.fh5co-hero {
+  position: relative;
+  height: 800px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-cover,
+  .fh5co-hero {
+    height: 700px;
+  }
+}
+
+.fh5co-cover.fh5co-cover_2 {
+  height: 700px;
+}
+
+.services.animate-box img {
+	height: 50px;
+	display: inline;
+}
+
+.btn.btn-primary-green {
+  background: #79c34f; 
+  color: #fff;
+  border: none !important;
+  border: 2px solid transparent !important;
+}
+
+.fh5co-cover .desc {
+    top: 30%;
+}
+
+.fh5co-cover .desc img {
+    max-width: 30%;
+}
+
+.services figure, .services h3 {
+	text-align: center;
+}
+
+.banner-social-buttons li {
+	display: inline;
+	margin-bottom: 10px;
+}
+
+.banner-social-buttons li a {
+	width: 160px;
+	text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  .fh5co-cover .desc .btn{
+    display: block;
+	margin-bottom: 10px;
+	max-width: 330px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+   .fh5co-cover .desc img {
+		max-width: 25%;
+   }
+   
+   .fh5co-cover .desc img {
+		max-width: 25%;
+   }
+   
+   .banner-social-buttons li {
+		display: block;
+   }
+
+}
+
+
+
+
+
