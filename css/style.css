@@ -1269,12 +1269,7 @@ h3.heading-section:before {
 #locationField, #controls {
 
       }
-      #autocomplete {
-        top: 0px;
-        left: 0px;
-	size: 50px;
-       }
-      .label {
+          .label {
         text-align: right;
         font-weight: bold;
         width: 100px;
