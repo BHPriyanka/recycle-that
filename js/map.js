@@ -1,3 +1,4 @@
+$("#alert-div").hide();
 var map;
 var testJSON = [{"street":"315 huntington ave.","city":"boston","state":"ma","zipcode":"02115","status":"active","donator":"username1","recycler":"null"},{"street":"151 Cambridge St","city":"cambridge","state":"ma","zipcode":"02114","status":"active","donator":"username1","recycler":"null"},{"street":"25 first st","city":"cambridge","state":"ma","zipcode":"02141","status":"inactive","donator":"username1","recycler":"username2"}];
 
@@ -100,6 +101,8 @@ function initMap() {
 $('#pickup').click(function(){
       dropLocations[0].mark.setMap(null);
       dropLocations.shift();
+      $("#alert-div").fadeIn(1000);
+           
      
 });
 }
