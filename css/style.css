@@ -1287,15 +1287,13 @@ h3.heading-section:before {
 .modal-body {padding: 2px 16px;}
 
 #locationField, #controls {
-        position: relative;
-        width: 480px;
+
       }
       #autocomplete {
-        position: absolute;
         top: 0px;
         left: 0px;
-        width: 99%;
-      }
+	size: 50px;
+       }
       .label {
         text-align: right;
         font-weight: bold;
@@ -1322,7 +1320,10 @@ h3.heading-section:before {
       }
       #locationField {
         height: 18px;
-        margin-bottom: 2px;
 	margin-top: 10px;
-	margin-left: 2px;
       }
+
+	#saveBtn {
+	 width: 70%;
+         height: 30px;
+	}
