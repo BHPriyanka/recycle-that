@@ -1,9 +1,9 @@
 var map;
 function initMap() {
-   /*var dropLocations = [{"id":48,"title":"Helgelandskysten","longitude":12.63376,"latitude":66.02219},{"id":46,"title":"Tysfjord","longitude":16.50279,"latitude":68.03515},{"id":44,"title":"Sledehunds-ekspedisjon","longitude":7.53744,"latitude":60.08929},{"id":43,"title":"Amundsens sydpolferd","longitude":11.38411,"latitude":62.57481},{"id":39,"title":"Vikingtokt","longitude":6.96781,"latitude":60.96335},{"id":6,"title":"Tungtvann- sabotasjen","longitude":8.49139,"latitude":59.87111}];*/
+    var dropLocations = [];
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
-      center: {lat: 66.022, lng: 12.633},
+      center: {lat: 42.339348, lng: -71.088173},
       disableDefaultUI: true
     });
     
@@ -11,7 +11,7 @@ function initMap() {
 
     var contentString = 
         '<div id="bodyContent">'+
-        '<p>301 Mass. Ave. Boston, MA 02115</p>' +
+        '<p>You are here.</p>' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
@@ -19,45 +19,81 @@ function initMap() {
     });
 
     var marker = new google.maps.Marker({
-      position: {lat: 66.022, lng: 12.633},
+      position: {lat: 42.339348, lng: -71.088173},
       map: map,
-      maxWidth: 200
+      maxWidth: 200,
+      icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     });
     
     marker.addListener('click', function() {
       infowindow.open(map, marker);
     });
     
-    addMarkers();
+    
+    getDropLocations();
+    //addMarkers();
   
-    function addMarkers() {
-        for(var i in dropLocations) {
+    function addMarkers(dropLocation) {
           var contentString = '<div id="bodyContent">'+
-                '<p>'+dropLocations[i].title+'</p>' +
+                '<p>'+dropLocation.address+'</p>' +
                 '</div>';
-
+            console.log(contentString);
           infoWindow = new google.maps.InfoWindow({ 
             content: contentString, 
             maxWidth: 200 
           });
 
-          var myLatLng = {lat: dropLocations[i].latitude, lng: dropLocations[i].longitude};
-          dropLocations[i].mark = new google.maps.Marker({
+          var myLatLng = {lat: dropLocation.latitude, lng: dropLocation.longitude};
+        
+          dropLocation.mark = new google.maps.Marker({
             position: myLatLng,
             info: contentString,
             map: map
           });
             
-          bounds.extend(dropLocations[i].mark.position);
+          bounds.extend(dropLocation.mark.position);
 
-           google.maps.event.addListener(dropLocations[i].mark, 'click', function() {
+           google.maps.event.addListener(dropLocation.mark, 'click', function() {
             infoWindow.setContent(this.info);
             infoWindow.open(map, this);
            });
-        }
         map.fitBounds(bounds);
     }
     
+    function getDropLocations() {
+    $.getJSON('http://recycle-that.jastcode.com/api/drop', function (data) {
+    var drops = data; 
+    if (drops.length) {
+        for(var i in drops){
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode( { 'address': drops[i].street + ', ' + drops[i].city + ' ' + drops[i].state + ' ' + drops[i].zipcode}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var lat = results[0].geometry.location.lat();
+                    var lng = results[0].geometry.location.lng();
+                    var info = {
+                        latitude: lat,
+                        longitude: lng,
+                        address: results[0].formatted_address
+                    };
+                    console.log(info);
+                    addMarkers(info);
+                  
+                } 
+            });
+            
+        }
+       
+    }
+        else{
+            console.log('no');
+        }
+        
+        
+        
+  }).fail(function(error){
+      alert("There was an error loading the drop locations, please refresh the page and try agian");
+    });
+    }
       
    
 }
