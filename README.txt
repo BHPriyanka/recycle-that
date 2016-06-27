@@ -1,16 +1,18 @@
 
 TITLE: 
-Render - One Page Responsive Free HTML5 template
+Recycle That: Recycle for Change
 
 AUTHOR:
-DESIGNED & DEVELOPED by FREEHTML5.co
+Adam Brinnig <https://www.linkedin.com/in/abrinnig>
+Amanda Priscilla Araujo da Silva <https://www.linkedin.com/in/amandapriscilla>
+Monsurat Olaosebikan <https://www.linkedin.com/in/monsurat>
+Priyanka B H <https://www.linkedin.com/in/bhpriyanka>
 
-Website: http://freehtml5.co/
-Twitter: http://twitter.com/fh5co
-Facebook: http://facebook.com/fh5co
-
+Technologies used:
+HTML, CSS, Bootstrap, JQuery, JavaScript, PHP
 
 CREDITS:
+Landing Page Free Template: Render - One Page Responsive Free HTML5 template by FREEHTML5.co
 
 Bootstrap
 http://getbootstrap.com/
