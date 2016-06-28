@@ -16,10 +16,10 @@ Definitions and terms we use.
 * CRV - Cash Redemption Value. The value of the recyclable within the CRV system.
 
 ## Authors
-Adam Brinnig [LinkedIn Profile] (https://www.linkedin.com/in/abrinnig)
-Amanda Priscilla Araujo da Silva [LinkedIn Profile] (https://www.linkedin.com/in/amandapriscilla)
-Monsurat Olaosebikan [LinkedIn Profile] (https://www.linkedin.com/in/monsurat)
-Priyanka B H [LinkedIn Profile] (https://www.linkedin.com/in/bhpriyanka)
+* Adam Brinnig [LinkedIn Profile] (https://www.linkedin.com/in/abrinnig)
+* Amanda Priscilla Araujo da Silva [LinkedIn Profile] (https://www.linkedin.com/in/amandapriscilla)
+* Monsurat Olaosebikan [LinkedIn Profile] (https://www.linkedin.com/in/monsurat)
+* Priyanka B H [LinkedIn Profile] (https://www.linkedin.com/in/bhpriyanka)
 
 ## Technologies used
 * HTML
