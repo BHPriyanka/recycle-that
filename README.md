@@ -1,5 +1,5 @@
 # Recycle That: Recycle for Change
-A web application for people who are often too busy to redeem their recyclable cans for cash that can connect with people who are interested in preserving the environment or simply need a little more cash. 
+A web application that connects people having recyclables to others who want to redeem them at recycling centers for extra cash.
 
 ## How it works
 A donator uses our web app to notify us of the current location of their CRV qualified recyclables.  Then users registered as recyclers will be notified of the recyclables to be picked up. These notifications only happen if the user is within a convenient walking distance. Once the recyclables are collected, they are encouraged to redeem them at the nearest recycling center.
