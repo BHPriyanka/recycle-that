@@ -1,4 +1,4 @@
-# Recycle That: Recycle for Change
+# RecycleThat: Recycle for Change
 A web application that connects people having recyclables to others who want to redeem them at recycling centers for extra cash.
 
 ## How it works
